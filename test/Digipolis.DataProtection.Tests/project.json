@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0-*",
+  "description": "Digipolis.DataProtection.Postgres unit tests.",
+  "authors": [ "digipolis.be" ],
+  "testRunner": "xunit",
+  "dependencies": {
+    "xunit": "2.2.0-beta2-build3300",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "moq.netcore": "4.4.0-beta8",
+    "NETStandard.Library": "1.6.0",
+    "Digipolis.DataProtection.Postgres": "*",
+    "Microsoft.EntityFrameworkCore": "1.0.1",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.0.1"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dnxcore50"
+      ],
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        }
+      }
+    }
+  }
+}

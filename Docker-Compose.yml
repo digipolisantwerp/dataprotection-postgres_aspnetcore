@@ -1,0 +1,24 @@
+version: '2'
+services:
+  
+  postgres:
+    image: postgres
+    ports:
+        - 5432:5432
+  web:
+    build: ./test/NetCoreDemoWeb
+    links: 
+        - postgres
+    depends_on:
+        - postgres
+    scale: 2
+  lb:
+    image: dockercloud/haproxy
+    links:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+  
+
