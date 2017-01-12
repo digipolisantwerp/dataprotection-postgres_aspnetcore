@@ -23,7 +23,7 @@ To add the package to a project, you add the package to the project.json :
  }
 ``` 
 
-ALWAYS check the latest version [here](https://github.com/digipolisantwerp/web_aspnetcore/blob/master/src/Digipolis.Web/project.json) before adding the above line !
+ALWAYS check the latest version [here](https://github.com/digipolisantwerp/dataprotection-postgres_aspnetcore/blob/master/src/Digipolis.DataProtection.Postgres/project.json) before adding the above line !
 
 Make sure you have our Nuget feed configured (https://www.myget.org/F/digipolisantwerp/api/v3/index.json).
 
