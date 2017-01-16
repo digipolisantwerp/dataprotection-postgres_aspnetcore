@@ -12,7 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{168B3965-9227-4E0B-8C9B-0E8FC37A6B29}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
-		README.md = README.md
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.DataProtection.Postgres", "src\Digipolis.DataProtection.Postgres\Digipolis.DataProtection.Postgres.xproj", "{B5F89903-F7A0-4AA6-8E9D-495513D93829}"

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-*",
+  "version": "1.0.0",
   "name": "Digipolis.DataProtection.Postgres",
   "dependencies": {
     "Microsoft.AspNetCore.DataProtection": "1.0.1",

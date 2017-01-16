@@ -8,9 +8,10 @@ using Digipolis.DataProtection.Postgres;
 namespace Digipolis.Dataprotection.Postgres.Migrations.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20170116112029_maxlengthonvalue")]
+    partial class maxlengthonvalue
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.2");
