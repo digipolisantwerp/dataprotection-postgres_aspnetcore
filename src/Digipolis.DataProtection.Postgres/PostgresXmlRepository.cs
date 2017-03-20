@@ -14,7 +14,6 @@ namespace Digipolis.DataProtection.Postgres
     internal class PostgresXmlRepository : IXmlRepository
     {
         private readonly Func<DataContext> _dbContextFactory;
-        private readonly DataContext _dbContext;
         private readonly Guid _appIdentifier;
         private readonly Guid _instanceIdentifier;
 
@@ -27,8 +26,6 @@ namespace Digipolis.DataProtection.Postgres
             _dbContextFactory = dbContextFactory;
             _appIdentifier = appIdentifier;
             _instanceIdentifier = instanceIdentifier;
-
-            _dbContext = _dbContextFactory();
         }
 
         /// <inheritdoc />
@@ -39,7 +36,8 @@ namespace Digipolis.DataProtection.Postgres
 
         private IEnumerable<XElement> GetAllElementsCore()
         {
-            var keys = _dbContext.KeyCollections.AsNoTracking().Where(x => x.AppId == _appIdentifier).Select(x => x.Value);
+            var dbContext = _dbContextFactory();
+            var keys = dbContext.KeyCollections.AsNoTracking().Where(x => x.AppId == _appIdentifier).Select(x => x.Value);
 
             foreach (var value in keys)
             {
@@ -58,8 +56,10 @@ namespace Digipolis.DataProtection.Postgres
                 InstanceId = _instanceIdentifier
             };
 
-            _dbContext.KeyCollections.Add(keyCollection);
-            _dbContext.SaveChanges();
+            var dbContext = _dbContextFactory();
+
+            dbContext.KeyCollections.Add(keyCollection);
+            dbContext.SaveChanges();
         }
     }
 }

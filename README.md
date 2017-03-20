@@ -19,7 +19,7 @@ To add the package to a project, you add the package to the project.json :
 
 ``` json 
 "dependencies": {
-    "Digipolis.DataProtection.Postgres":  "1.0.0"
+    "Digipolis.DataProtection.Postgres":  "1.0.1"
  }
 ``` 
 
