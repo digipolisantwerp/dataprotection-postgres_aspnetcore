@@ -1,23 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{84E07E22-4E00-423E-A1D7-08340F442BF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7BA00FD5-23DC-4830-9272-40C2F52526F0}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.DataProtection.Tests", "test\Digipolis.DataProtection.Tests\Digipolis.DataProtection.Tests.xproj", "{CE87FD3A-8190-47C6-A3E0-A71E8EAAEFA3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{168B3965-9227-4E0B-8C9B-0E8FC37A6B29}"
 	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.DataProtection.Postgres", "src\Digipolis.DataProtection.Postgres\Digipolis.DataProtection.Postgres.xproj", "{B5F89903-F7A0-4AA6-8E9D-495513D93829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.DataProtection.Tests", "test\Digipolis.DataProtection.Tests\Digipolis.DataProtection.Tests.csproj", "{CE87FD3A-8190-47C6-A3E0-A71E8EAAEFA3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.Dataprotection.Postgres.Migrations", "src\Digipolis.Dataprotection.Postgres.Migrations\Digipolis.Dataprotection.Postgres.Migrations.xproj", "{C56CFA12-2E15-40E0-930F-5F2E4B840269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.DataProtection.Postgres", "src\Digipolis.DataProtection.Postgres\Digipolis.DataProtection.Postgres.csproj", "{B5F89903-F7A0-4AA6-8E9D-495513D93829}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.Dataprotection.Postgres.Migrations", "src\Digipolis.Dataprotection.Postgres.Migrations\Digipolis.Dataprotection.Postgres.Migrations.csproj", "{C56CFA12-2E15-40E0-930F-5F2E4B840269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
