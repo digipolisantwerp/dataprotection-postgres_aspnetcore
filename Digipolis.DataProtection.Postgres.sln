@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7BA00FD5-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{168B3965-9227-4E0B-8C9B-0E8FC37A6B29}"
 	ProjectSection(SolutionItems) = preProject
+		changelog.md = changelog.md
 		readme.md = readme.md
 	EndProjectSection
 EndProject

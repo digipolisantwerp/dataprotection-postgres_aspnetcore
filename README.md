@@ -15,15 +15,23 @@ Description
 
 ## Installation
 
-To add the package to a project, you add the package to the project.json :
+To add the package to a project, you add the package to the csproj project file:
+
+```xml
+  <ItemGroup>
+    <PackageReference Include="Digipolis.DataProtection.Postgres" Version="2.0.0" />
+  </ItemGroup>
+``` 
+
+or if your project still works with project.json :
 
 ``` json 
 "dependencies": {
-    "Digipolis.DataProtection.Postgres":  "1.0.1"
+    "Digipolis.DataProtection.Postgres":  "2.0.0"
  }
 ``` 
 
-ALWAYS check the latest version [here](https://github.com/digipolisantwerp/dataprotection-postgres_aspnetcore/blob/master/src/Digipolis.DataProtection.Postgres/project.json) before adding the above line !
+ALWAYS check the latest version [here](https://github.com/digipolisantwerp/dataprotection-postgres_aspnetcore/blob/master/src/Digipolis.DataProtection.Postgres/Digipolis.DataProtection.Postgres.csproj) before adding the above line !
 
 Make sure you have our Nuget feed configured (https://www.myget.org/F/digipolisantwerp/api/v3/index.json).
 
