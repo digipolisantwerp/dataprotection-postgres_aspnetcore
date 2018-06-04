@@ -1,5 +1,9 @@
 # DataProtection.Postgres Toolbox
 
+## 3.0.0
+
+- upgrade to .Net Standard 2.0 for compatibility with .Net Core 2.0 web projects
+
 ## 2.0.0
 
 - conversion to csproj en MSBuild.
