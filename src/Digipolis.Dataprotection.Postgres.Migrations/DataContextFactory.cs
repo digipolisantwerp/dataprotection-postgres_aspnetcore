@@ -1,5 +1,6 @@
 ﻿using Digipolis.DataProtection.Postgres;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Digipolis.Dataprotection.Postgres.Migrations
 {
-    internal class DataContextFactory : IDbContextFactory<DataContext>
+    internal class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
     {
         private readonly string _connectionString;
 
@@ -24,6 +25,11 @@ namespace Digipolis.Dataprotection.Postgres.Migrations
             var dbContextOptions = builder.Options;
 
             return new DataContext(dbContextOptions);
+        }
+
+        public DataContext CreateDbContext(string[] args)
+        {
+            return Create(null);
         }
     }
 }
