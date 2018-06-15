@@ -13,13 +13,19 @@ Description
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Versions
+
+The latest version of this package targets **.NET Standard 2.0**.
+
+Use version 2.x if you need a version targetting **.NET Standard 1.6**. The source code of this version is available in [branch 2.x](https://github.com/digipolisantwerp/dataprotection-postgres_aspnetcore/tree/2.x) for maintenance reasons.
+
 ## Installation
 
 To add the package to a project, you add the package to the csproj project file:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Digipolis.DataProtection.Postgres" Version="2.0.0" />
+    <PackageReference Include="Digipolis.DataProtection.Postgres" Version="3.0.0" />
   </ItemGroup>
 ``` 
 
@@ -27,7 +33,7 @@ or if your project still works with project.json :
 
 ``` json 
 "dependencies": {
-    "Digipolis.DataProtection.Postgres":  "2.0.0"
+    "Digipolis.DataProtection.Postgres":  "3.0.0"
  }
 ``` 
 
@@ -56,4 +62,3 @@ Method signature:
 ``` csharp
     PersistKeysToPostgres(string connectionString, Guid appId, Guid instanceId)
 ```
-
