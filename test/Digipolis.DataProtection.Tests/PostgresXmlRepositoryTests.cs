@@ -4,6 +4,9 @@ using System;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Xunit;
 
 namespace Digipolis.DataProtection.Tests
@@ -81,7 +84,33 @@ namespace Digipolis.DataProtection.Tests
             Assert.True(storedElement.Timestamp >= DateTime.Now.AddMinutes(-1));
         }
 
-        
+        [Fact]
+        public void TestConfiguration()
+        {
+            var connectionString = "Host=postgres;Database=dataprotection;Username=postgres";
+            var serviceCollection = new ServiceCollection();
+
+            serviceCollection
+                .AddDataProtection()
+                .PersistKeysToPostgres(connectionString, _appId, _instanceId);
+
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+
+            var dataProtector = serviceProvider.GetDataProtector("sample");
+
+            dataProtector.Protect("Helloworld");
+
+            var builder = new DbContextOptionsBuilder<DataContext>();
+            builder.UseNpgsql(connectionString);
+            var dbContextOptions = builder.Options;
+            var dataContext = new DataContext(dbContextOptions);
+
+            var keyCollection =
+                dataContext.KeyCollections.FirstOrDefault(kc => kc.AppId == _appId && kc.InstanceId == _instanceId);
+
+            Assert.NotNull(keyCollection);
+        }
+
     }
 }
 

@@ -19,3 +19,4 @@ using System.Runtime.InteropServices;
 [assembly: Guid("b5f89903-f7a0-4aa6-8e9d-495513d93829")]
 
 [assembly: InternalsVisibleTo("Digipolis.DataProtection.Tests")]
+[assembly: InternalsVisibleTo("Digipolis.DataProtection.IntegrationTests")]

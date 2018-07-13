@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.DataProtection.Po
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.Dataprotection.Postgres.Migrations", "src\Digipolis.Dataprotection.Postgres.Migrations\Digipolis.Dataprotection.Postgres.Migrations.csproj", "{C56CFA12-2E15-40E0-930F-5F2E4B840269}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digipolis.DataProtection.IntegrationTests", "test\Digipolis.DataProtection.IntegrationTests\Digipolis.DataProtection.IntegrationTests.csproj", "{6374B188-76BE-46AA-AC0F-E8A4A2B0A199}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{C56CFA12-2E15-40E0-930F-5F2E4B840269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C56CFA12-2E15-40E0-930F-5F2E4B840269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C56CFA12-2E15-40E0-930F-5F2E4B840269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6374B188-76BE-46AA-AC0F-E8A4A2B0A199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6374B188-76BE-46AA-AC0F-E8A4A2B0A199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6374B188-76BE-46AA-AC0F-E8A4A2B0A199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6374B188-76BE-46AA-AC0F-E8A4A2B0A199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,5 +51,6 @@ Global
 		{CE87FD3A-8190-47C6-A3E0-A71E8EAAEFA3} = {7BA00FD5-23DC-4830-9272-40C2F52526F0}
 		{B5F89903-F7A0-4AA6-8E9D-495513D93829} = {84E07E22-4E00-423E-A1D7-08340F442BF5}
 		{C56CFA12-2E15-40E0-930F-5F2E4B840269} = {84E07E22-4E00-423E-A1D7-08340F442BF5}
+		{6374B188-76BE-46AA-AC0F-E8A4A2B0A199} = {7BA00FD5-23DC-4830-9272-40C2F52526F0}
 	EndGlobalSection
 EndGlobal
