@@ -28,7 +28,7 @@ To add the package to a project, you add the package to the csproj project file:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Digipolis.DataProtection.Postgres" Version="3.0.0" />
+    <PackageReference Include="Digipolis.DataProtection.Postgres" Version="3.0.1" />
   </ItemGroup>
 ```
 
@@ -36,7 +36,7 @@ or if your project still works with project.json :
 
 ``` json
 "dependencies": {
-    "Digipolis.DataProtection.Postgres":  "3.0.0"
+    "Digipolis.DataProtection.Postgres":  "3.0.1"
  }
 ```
 
