@@ -12,6 +12,7 @@ Description
 - [Installation](#installation)
 - [Description](#description)
 - [Configuration in Startup.ConfigureServices](#configuration-in-startupconfigureservices)
+- [Development](#development)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -29,21 +30,21 @@ To add the package to a project, you add the package to the csproj project file:
   <ItemGroup>
     <PackageReference Include="Digipolis.DataProtection.Postgres" Version="3.0.0" />
   </ItemGroup>
-``` 
+```
 
 or if your project still works with project.json :
 
-``` json 
+``` json
 "dependencies": {
     "Digipolis.DataProtection.Postgres":  "3.0.0"
  }
-``` 
+```
 
 ALWAYS check the latest version [here](https://github.com/digipolisantwerp/dataprotection-postgres_aspnetcore/blob/master/src/Digipolis.DataProtection.Postgres/Digipolis.DataProtection.Postgres.csproj) before adding the above line !
 
 Make sure you have our Nuget feed configured (https://www.myget.org/F/digipolisantwerp/api/v3/index.json).
 
-In Visual Studio you can also use the NuGet Package Manager to do this.    
+In Visual Studio you can also use the NuGet Package Manager to do this.
 
 ## Description
 
@@ -64,3 +65,7 @@ Method signature:
 ``` csharp
     PersistKeysToPostgres(string connectionString, Guid appId, Guid instanceId)
 ```
+
+## Development
+
+An integration test is available.  Run `./run_integration_tests.sh` to run the integration tests.

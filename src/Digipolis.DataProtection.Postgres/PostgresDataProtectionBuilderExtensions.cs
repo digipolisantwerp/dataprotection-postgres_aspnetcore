@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Digipolis.DataProtection.Postgres
 {
@@ -45,7 +47,11 @@ namespace Digipolis.DataProtection.Postgres
             builder.UseNpgsql(connectionString);
             var dbContextOptions = builder.Options;
 
-            config.Services.TryAddSingleton<IXmlRepository>(new PostgresXmlRepository(() => new DataContext(dbContextOptions), appId, instanceId));
+            config.Services.Configure<KeyManagementOptions>(options =>
+            {
+                options.XmlRepository =
+                    new PostgresXmlRepository(() => new DataContext(dbContextOptions), appId, instanceId);
+            });
             return config;
         }
     }
